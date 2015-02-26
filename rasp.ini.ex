@@ -1,2 +1,2 @@
 [global]
-api_key = 'o-lo-lo'
+api_key = o-lo-lo

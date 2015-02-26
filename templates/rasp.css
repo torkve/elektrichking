@@ -3,10 +3,10 @@ table {
 	border-collapse: collapse;
 	border-spacing: 1px;
 }
-.hidden {
-	visibility: hidden;
+table.collapsed tr {
 	display: none;
 }
+
 th {
 	background-color: #f8f8fa;
 	text-align: center;     

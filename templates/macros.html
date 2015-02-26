@@ -1,7 +1,7 @@
 {%- macro connection(id, loc1, loc2) -%}
     <div id="{{ id }}">
         <table>
-            <caption>{{ loc1["name"] }} &rarr; {{ loc2["name"] }}</caption>
+            <caption onclick="this.parentNode.classList.toggle('collapsed')">{{ loc1["name"] }}&nbsp;&rarr;&nbsp;{{ loc2["name"] }}</caption>
             <tr>
                 <th>№</th>
                 <th>Время</th>
@@ -17,6 +17,10 @@
                     <td class="second">&#10551;<img src="{{ row["typeimg2"] }}" />&nbsp;{{ row["num2"] }}</td>
                     <td class="second-time">{{ row["dep_int"] }}&nbsp;&ndash;&nbsp;{{ row["arr"] }}</td>
                 </tr>
+            {%- else -%}
+                <tr>
+                    <td style="text-align:center">Сегодня уже не уехать</td>
+                </tr>
             {%- endfor -%}
         </table>
     </div>
@@ -24,7 +28,7 @@
 {%- macro route(id, loc1, loc2) -%}
     <div id="{{ id }}">
         <table>
-            <caption>{{ loc1["name"] }} &rarr; {{ loc2["name"] }}</caption>
+            <caption onclick="this.parentNode.classList.toggle('collapsed')">{{ loc1["name"] }}&nbsp;&rarr;&nbsp;{{ loc2["name"] }}</caption>
             <tr>
                 <th>№</th>
                 <th>Отпр.</th>
@@ -37,6 +41,10 @@
                     <td>{{ row["departure"] }}</td>
                     <td>{{ row["arrival"] }}</td>
                     <td>{{ row["title"] }}</td>
+                </tr>
+            {%- else -%}
+                <tr>
+                    <td style="text-align:center">Сегодня уже не проехать</td>
                 </tr>
             {%- endfor -%}
         </table>

@@ -7,18 +7,21 @@ var gn_long = {{ gn["loc"][1] }};
 var dest_lat = {{ locations[direction]["loc"][0] }};
 var dest_long = {{ locations[direction]["loc"][1] }};
 
+function toggleCollapse(id) {
+    document.getElementById(id).children[0].caption.click();
+}
 function hideDest() {
-    document.getElementById('dest2gn').className = 'hidden';
+    toggleCollapse('dest2gn');
     {% if locations[direction]["int"] is not none -%}
-        document.getElementById('dest2int').className = 'hidden';
-        document.getElementById('int2gn').className = 'hidden';
+        toggleCollapse('dest2int');
+        toggleCollapse('int2gn');
     {%- endif %}
 }
 function hideGn() {
-    document.getElementById('gn2dest').className = 'hidden';
+    toggleCollapse('gn2dest');
     {% if locations[direction]["int"] is not none -%}
-        document.getElementById('int2dest').className = 'hidden';
-        document.getElementById('gn2int').className = 'hidden';
+        toggleCollapse('int2dest');
+        toggleCollapse('gn2int');
     {%- endif %}
 }
 
