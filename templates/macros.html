@@ -1,0 +1,44 @@
+{%- macro connection(id, loc1, loc2) -%}
+    <div id="{{ id }}">
+        <table>
+            <caption>{{ loc1["name"] }} &rarr; {{ loc2["name"] }}</caption>
+            <tr>
+                <th>№</th>
+                <th>Время</th>
+                <th>Итого</th>
+            </tr>
+            {%- for row in connections[id] -%}
+                <tr>
+                    <td><img src="{{ row["typeimg1"] }}" />&nbsp;{{ row["num1"] }}</td>
+                    <td>{{ row["dep"] }}&nbsp;&ndash;&nbsp;{{ row["arr_int"] }}</td>
+                    <td rowspan="2" class="with-border">{{ row["dur"] }}</td>
+                </tr>
+                <tr class="with-border">
+                    <td class="second">&#10551;<img src="{{ row["typeimg2"] }}" />&nbsp;{{ row["num2"] }}</td>
+                    <td class="second-time">{{ row["dep_int"] }}&nbsp;&ndash;&nbsp;{{ row["arr"] }}</td>
+                </tr>
+            {%- endfor -%}
+        </table>
+    </div>
+{%- endmacro -%}
+{%- macro route(id, loc1, loc2) -%}
+    <div id="{{ id }}">
+        <table>
+            <caption>{{ loc1["name"] }} &rarr; {{ loc2["name"] }}</caption>
+            <tr>
+                <th>№</th>
+                <th>Отпр.</th>
+                <th>Приб.</th>
+                <th>Маршрут</th>
+            </tr>
+            {%- for row in routes[id] -%}
+                <tr class="with-border">
+                    <td>{{ row["num"] }}</td>
+                    <td>{{ row["departure"] }}</td>
+                    <td>{{ row["arrival"] }}</td>
+                    <td>{{ row["title"] }}</td>
+                </tr>
+            {%- endfor -%}
+        </table>
+    </div>
+{%- endmacro -%}

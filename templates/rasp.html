@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{%- import 'macros.html' as macros with context -%}
+<html>
+<head>
+    <title>Elektrichking schedule</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="user-scalable=no, width=device-width" />
+    <style type="text/css">
+        {% include 'rasp.css' without context %}
+    </style>
+    <script type="text/javascript">
+        {% include 'rasp.js' with context %}
+    </script>
+</head>
+<body>
+    <div id="location">Вы: </div>
+    <div id="coords">Координаты: </div>
+
+    <div id="buttons">
+        {%- for loc in locations -%}
+            <input type="button" class="button
+                {%- if locations[loc]["name"] == locations[direction]["name"] -%}
+                    {{ " active" }}
+                {%- endif -%}
+                " value="{{ locations[loc]["name"] }}" onclick="javascript:window.location='/rasp/{{ loc }}'" />
+        {%- endfor -%}
+    </div>
+    {% if locations[direction]["int"] is not none -%}
+        <h1>Лучшие стыковки</h1>
+        {{ macros.connection("gn2dest", gn, locations[direction]) }}
+        {{ macros.connection("dest2gn", locations[direction], gn) }}
+    {%- endif %}
+
+    <h1>Расписание</h1>
+    {% if locations[direction]["int"] is not none -%}
+        {{ macros.route("gn2int", gn, locations[direction]["int"]) }}
+        {{ macros.route("int2dest", locations[direction]["int"], locations[direction]) }}
+        {{ macros.route("dest2int", locations[direction], locations[direction]["int"]) }}
+        {{ macros.route("int2gn", locations[direction]["int"], gn) }}
+    {%- else -%}
+        {{ macros.route("gn2dest", gn, locations[direction]) }}
+        {{ macros.route("dest2gn", locations[direction], gn) }}
+    {%- endif %}
+</body>
+</html>
+
