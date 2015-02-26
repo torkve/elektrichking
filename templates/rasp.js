@@ -8,8 +8,10 @@ var dest_lat = {{ locations[direction]["loc"][0] }};
 var dest_long = {{ locations[direction]["loc"][1] }};
 
 function toggleCollapse(id) {
-    document.getElementById(id).children[0].caption.click();
+    var el = document.getElementById(id).children[0];
+    el.classList.toggle('collapsed');
 }
+
 function hideDest() {
     toggleCollapse('dest2gn');
     {% if locations[direction]["int"] is not none -%}
