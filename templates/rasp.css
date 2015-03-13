@@ -70,9 +70,9 @@ img {
 	box-shadow: 0 0 5px rgba(0,0,0,0.5);
 	background-color: #98fb98;
 }
-arrow{
+.arrow{
 	display: inline-block;
-        margin: 0px 10px;
+	margin: 0px 10px;
 	width: 1em;
 	height: 1em;
 	background: url(http://subtlepatterns.com/patterns/extra_clean_paper.png);
@@ -80,7 +80,7 @@ arrow{
 	border-radius: 50%;
 	box-shadow: 0 3px 20px rgba(0,0,0,.5), inset 0 2px 0 rgba(255,255,255,.6), 0 2px 0 rgba(0,0,0,.1), inset 0 0 20px rgba(0,0,0,.1);
 }
-arrow:hover{
+.arrow:hover{
 	box-shadow: inset 0 0 6px rgba(0,0,0,.2), 0 2px 0 rgba(255,255,255,.4), inset 0 2px 0 rgba(0,0,0,.1);
 }
 .arrow-icon{
