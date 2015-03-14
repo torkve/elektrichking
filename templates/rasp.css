@@ -29,6 +29,7 @@ caption {
 	vertical-align:middle;
 	display:inline-block;
 	margin-bottom:5px;
+	margin-left:35px;
 }
 
 .second {
@@ -109,6 +110,8 @@ img {
 	height: 1em;
 	background: #fffff0;
 	cursor: pointer;
+	position:absolute;
+	left:8px;
 	border-radius: 50%;
 	box-shadow: 0 3px 20px rgba(0,0,0,.5), inset 0 2px 0 rgba(255,255,255,.6), 0 2px 0 rgba(0,0,0,.1), inset 0 0 20px rgba(0,0,0,.1);
 }
