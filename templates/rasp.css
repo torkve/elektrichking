@@ -115,7 +115,7 @@ img {
 	background-size: contain;	
 
 }
-.collapsed div .caption .arrow-icon{
+div.caption+.collapsed .arrow-icon{
 	background: url('static/arrow-down.jpg') center center no-repeat ;
 	background-size: contain;
 	
