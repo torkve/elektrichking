@@ -29,7 +29,7 @@ caption {
 	vertical-align:middle;
 	display:inline-block;
 	margin-bottom:5px;
-	margin-left:35px;
+	margin-left:40px;
 }
 
 .second {
@@ -124,7 +124,7 @@ img {
 	
 
 }
-.collapsed caption .arrow-icon{
+.collapsed div caption .arrow-icon{
 	background: url('static/arrow-down.jpg') center center no-repeat ;
 	background-size: contain;
 	
