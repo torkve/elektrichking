@@ -47,6 +47,7 @@ img {
 	border-bottom: 1px solid #ccc;
 }
 .button {
+	position: relative;
 	display: inline-block;
 	width: 24%;
 	border-radius: 4px;
@@ -73,7 +74,6 @@ img {
 .arrow{
 	display: inline-block;
 	margin: 0px 10px;
-	padding:2px;
 	width: 1em;
 	height: 1em;
 	background: #fffff0;
@@ -87,11 +87,11 @@ img {
 .arrow-icon{
 	background: url('static/arrow-up.jpg') center center no-repeat;
 	background-size: contain;	
-	padding:2px;
+	
 
 }
 .collapsed caption .arrow-icon{
 	background: url('static/arrow-down.jpg') center center no-repeat ;
 	background-size: contain;
-	padding:2px;
+	
 }
