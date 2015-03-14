@@ -48,6 +48,8 @@ img {
 	border-bottom: 1px solid #ccc;
 }
 .button {
+	height:25px;
+	line-height:25px;
 	font-weight: 500;
 	color:#333333;
 	text-shadow: 0 -1px 1px #777;
