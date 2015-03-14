@@ -1,9 +1,9 @@
 {%- macro connection(id, loc1, loc2) -%}
     <div id="{{ id }}">
-        <table>
-            <div>
+     <div>
                 <caption onclick="toggleCollapse('{{ id }}')"><div class="arrow arrow-icon"></div>{{ loc1["name"] }}&nbsp;&rarr;&nbsp;{{ loc2["name"] }}</caption>
             </div>
+        <table>
             <tr>
                 <th>№</th>
                 <th>Время</th>
@@ -29,10 +29,10 @@
 {%- endmacro -%}
 {%- macro route(id, loc1, loc2) -%}
     <div id="{{ id }}">
-        <table>
-            <div>
+     <div>
                 <caption onclick="toggleCollapse('{{ id }}')"><div class="arrow arrow-icon"></div>{{ loc1["name"] }}&nbsp;&rarr;&nbsp;{{ loc2["name"] }}</caption>
             </div>
+        <table>
             <tr>
                 <th>№</th>
                 <th>Отпр.</th>
