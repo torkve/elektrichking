@@ -3,7 +3,7 @@ table {
 	border-collapse: collapse;
 	border-spacing: 1px;
 }
-table.collapsed tr {
+div.collapsed table tr {
 	display: none;
 }
 
@@ -115,7 +115,7 @@ img {
 	background-size: contain;	
 
 }
-.arrow-icon+.collapsed{
+.collapsed div .arrow-icon{
 	background: url('static/arrow-down.jpg') center center no-repeat ;
 	background-size: contain;
 	
