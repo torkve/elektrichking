@@ -8,7 +8,7 @@ var dest_lat = {{ locations[direction]["loc"][0] }};
 var dest_long = {{ locations[direction]["loc"][1] }};
 
 function toggleCollapse(id) {
-    var el = document.getElementById(id).children[1];
+    var el = document.getElementById(id);
     el.classList.toggle('collapsed');
 }
 
