@@ -20,7 +20,7 @@ gn = {
     "name": "ГН",
     "name_gen": "в ГН",
     "loc": (55.957869, 37.446412),
-    "station_ids": ["s9739729"],
+    "station_ids": ["s9837361"],
 }
 
 locations = {
@@ -83,7 +83,9 @@ def n(f, t, i=None):
 
 def download(date, fr, to, page=1):
     u = url.format(api_key=api_key, fr=fr, to=to, date=date, page=page)
+    print("loading {}".format(u))
     req = loads(str(urlopen(u).read(), 'utf-8'))
+    print("loaded")
     
     data = req['threads']
     if req['pagination']['has_next']:
